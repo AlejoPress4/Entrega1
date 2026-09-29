@@ -1,8 +1,8 @@
 class Prestamo:
-    def __init__(self, equipo, estudiante, fecha_prestamo=None, fecha_devolucion=None):
+    def __init__(self, equipo_id, estudiante_id, fecha_prestamo=None, fecha_devolucion=None):
         self.id = None
-        self.equipo = equipo
-        self.estudiante = estudiante
+        self.equipo_id = equipo_id
+        self.estudiante_id = estudiante_id
         self.fecha_prestamo = fecha_prestamo
         self.fecha_devolucion = fecha_devolucion
         self.estado = "ACTIVO"
@@ -26,4 +26,4 @@ class Prestamo:
         return self.id
 
     def __str__(self):
-        return f"Prestamo(id={self.id}, equipo={self.equipo.get_nombre() if self.equipo else None}, estudiante={self.estudiante.nombre if self.estudiante else None})"
+        return f"Prestamo(id={self.id}, equipo_id={self.equipo_id}, estudiante_id={self.estudiante_id}, fecha_prestamo={self.fecha_prestamo}, fecha_devolucion={self.fecha_devolucion}, estado={self.estado})"

@@ -43,6 +43,28 @@ class RepositorioPrestamos(ABC):
         pass
 
 
+class RepositorioCategoriasEquipo(ABC):
+    @abstractmethod
+    def guardar(self, categoria):
+        pass
+
+    @abstractmethod
+    def buscar_por_id(self, categoria_id):
+        pass
+
+    @abstractmethod
+    def listar_todos(self):
+        pass
+
+    @abstractmethod
+    def actualizar(self, categoria_id, categoria_actualizada):
+        pass
+
+    @abstractmethod
+    def eliminar(self, categoria_id):
+        pass
+
+
 class Notificador(ABC):
     @abstractmethod
     def enviar(self, mensaje, destinatario):
