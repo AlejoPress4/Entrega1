@@ -1,0 +1,1 @@
+class ExcepcionReglaNegocio(Exception): pass
